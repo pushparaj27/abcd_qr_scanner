@@ -1,0 +1,120 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.4.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "build",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "libyuv",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "YUV",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "native-r_barcode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-native-r_barcode-RelWithDebInfo-8323a5d38ad4fd4028c9.json",
+					"name" : "native-r_barcode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "yuv::@039278ea0a093c55e3e1",
+					"jsonFile" : "target-yuv-RelWithDebInfo-c7269d3435de5e0ad4a8.json",
+					"name" : "yuv",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "yuv_shared::@039278ea0a093c55e3e1",
+					"jsonFile" : "target-yuv_shared-RelWithDebInfo-7e52692b97ef036efdf7.json",
+					"name" : "yuv_shared",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "yuvconvert::@039278ea0a093c55e3e1",
+					"jsonFile" : "target-yuvconvert-RelWithDebInfo-6177cc553a9d19da557d.json",
+					"name" : "yuvconvert",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Clone Project/r_barcode/r_barcode/android/.cxx/RelWithDebInfo/695z92yd/arm64-v8a",
+		"source" : "C:/Clone Project/r_barcode/r_barcode/android/src/main/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 1
+	}
+}

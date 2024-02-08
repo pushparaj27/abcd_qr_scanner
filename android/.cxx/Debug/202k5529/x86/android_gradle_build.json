@@ -1,0 +1,61 @@
+{
+  "buildFiles": [
+    "C:\\Clone Project\\r_barcode\\r_barcode\\android\\src\\main\\cpp\\CMakeLists.txt",
+    "C:\\Clone Project\\r_barcode\\r_barcode\\android\\src\\main\\cpp\\libyuv\\CM_linux_packages.cmake",
+    "C:\\Clone Project\\r_barcode\\r_barcode\\android\\src\\main\\cpp\\libyuv\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\pushparaj.manickam\\AppData\\Local\\Android\\Sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Clone Project\\r_barcode\\r_barcode\\android\\.cxx\\Debug\\202k5529\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\pushparaj.manickam\\AppData\\Local\\Android\\Sdk\\cmake\\3.18.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Clone Project\\r_barcode\\r_barcode\\android\\.cxx\\Debug\\202k5529\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-r_barcode::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "native-r_barcode",
+      "output": "C:\\Clone Project\\r_barcode\\r_barcode\\my_example\\build\\r_barcode\\intermediates\\cxx\\Debug\\202k5529\\obj\\x86\\libnative-r_barcode.so",
+      "runtimeFiles": []
+    },
+    "yuv::@039278ea0a093c55e3e1": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "yuv",
+      "output": "C:\\Clone Project\\r_barcode\\r_barcode\\android\\.cxx\\Debug\\202k5529\\x86\\build\\libyuv.a"
+    },
+    "yuv_shared::@039278ea0a093c55e3e1": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "yuv_shared",
+      "output": "C:\\Clone Project\\r_barcode\\r_barcode\\my_example\\build\\r_barcode\\intermediates\\cxx\\Debug\\202k5529\\obj\\x86\\libyuv.so",
+      "runtimeFiles": []
+    },
+    "yuvconvert::@039278ea0a093c55e3e1": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "yuvconvert",
+      "output": "C:\\Clone Project\\r_barcode\\r_barcode\\my_example\\build\\r_barcode\\intermediates\\cxx\\Debug\\202k5529\\obj\\x86\\yuvconvert",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "C:\\Users\\pushparaj.manickam\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "cppCompilerExecutable": "C:\\Users\\pushparaj.manickam\\AppData\\Local\\Android\\Sdk\\ndk\\23.1.7779620\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp",
+    "cc"
+  ]
+}
