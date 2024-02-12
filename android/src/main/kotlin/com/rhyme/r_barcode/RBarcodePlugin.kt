@@ -227,7 +227,6 @@ public class RBarcodePlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         }
     }
 
-    //初始化相机
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun instantiateCamera(call: MethodCall, result: Result) {
 //        if (BuildConfig.DEBUG && textureRegistry == null || rBarcodeEngine == null || rBarcodeCameraView != null || messenger != null) {

@@ -31,9 +31,9 @@ class RBarcodeImageByte {
 
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     fun getByteFromImage(image: Image) {
-        val yPlane = image.planes[0].buffer// 灰图
-        val uPlane = image.planes[1].buffer // 颜色
-        val vPlane = image.planes[2].buffer // 饱和度
+        val yPlane = image.planes[0].buffer
+        val uPlane = image.planes[1].buffer 
+        val vPlane = image.planes[2].buffer 
         yB = yPlane!!.remaining()
         uB = uPlane!!.remaining()
         vB = vPlane!!.remaining()

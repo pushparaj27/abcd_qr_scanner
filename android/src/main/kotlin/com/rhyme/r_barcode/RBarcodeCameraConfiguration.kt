@@ -95,7 +95,6 @@ class RBarcodeCameraConfiguration {
         return orientation
     }
 
-    //获取可用的摄像头
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     fun getAvailableCameras(activity: Activity): List<Map<String, Any>>? {
         val cameraManager = activity.getSystemService(Context.CAMERA_SERVICE) as CameraManager
@@ -115,7 +114,6 @@ class RBarcodeCameraConfiguration {
         return cameras
     }
 
-    //获取最佳可用的摄像机配置文件以进行分辨率预设
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     private fun getBestAvailableCamcorderProfileForResolutionPreset(
             cameraName: String, preset: ResolutionPreset): CamcorderProfile? {
@@ -241,7 +239,6 @@ class RBarcodeCameraConfiguration {
         }
     }
 
-    // 获取预览相机的尺寸
     @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     internal fun computeBestPreviewSize(cameraName: String, preset: ResolutionPreset): Size? {
 //        var mPreset: ResolutionPreset = preset

@@ -92,21 +92,7 @@ class _MaterialBarCodeFrameWidgetState extends State<MaterialBarCodeFrameWidget>
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (BuildContext context, Widget? child) {
-        return buildFrame(
-          child,
-          _expandAnimation.evaluate(_controller),
-          _startExpandColor.evaluate(_controller),
-          _kStrokeHeadTween.evaluate(_controller),
-          _kStrokeTailTween.evaluate(_controller),
-          _kStepTween.evaluate(_controller),
-          _kRotationTween.evaluate(_controller),
-        );
-      },
-      child: widget.child,
-    );
+    return widget.child!;
   }
 
   Widget buildFrame(
