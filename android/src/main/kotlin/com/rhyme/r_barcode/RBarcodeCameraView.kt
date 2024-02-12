@@ -17,7 +17,8 @@ import com.rhyme.r_barcode.RBarcodeCameraConfiguration.ResolutionPreset
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.view.TextureRegistry.SurfaceTextureEntry
 import java.util.*
-
+import android.graphics.Rect
+import android.hardware.camera2.CameraCharacteristics
 
 @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
 class RBarcodeCameraView(private val activity: Activity,
@@ -146,12 +147,22 @@ class RBarcodeCameraView(private val activity: Activity,
         }
     }
 
+    private fun calculateZoomRect(activeArraySize: Rect, zoomLevel: Float): Rect {
+        val centerX = activeArraySize.centerX()
+        val centerY = activeArraySize.centerY()
+        val deltaX = (activeArraySize.width() / (2 * zoomLevel)).toInt()
+        val deltaY = (activeArraySize.height() / (2 * zoomLevel)).toInt()
+        return Rect(centerX - deltaX, centerY - deltaY, centerX + deltaX, centerY + deltaY)
+    }
+
   
     @Throws(CameraAccessException::class)
     private fun createCaptureSession(
             vararg surfaces: Surface) {
        
         closeCaptureSession()
+
+        val cameraCharacteristics: CameraCharacteristics? = cameraManager.getCameraCharacteristics(cameraName)
         
         captureRequestBuilder = cameraDevice!!.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW)
 
@@ -185,6 +196,18 @@ class RBarcodeCameraView(private val activity: Activity,
                             CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON_AUTO_FLASH)
                     captureRequestBuilder!!.set(
                             CaptureRequest.JPEG_ORIENTATION, RBarcodeCameraConfiguration.get().getOrientation(activity, cameraManager, cameraName))
+                    
+
+                            
+                   
+                    cameraCharacteristics?.let { characteristics ->
+                        val rect = characteristics.get(CameraCharacteristics.SENSOR_INFO_ACTIVE_ARRAY_SIZE)
+                        rect?.let {
+                            val zoomedRect = calculateZoomRect(it, zoomLevel)
+                            captureRequestBuilder!!.set(CaptureRequest.SCALER_CROP_REGION, zoomedRect)
+                        }
+                    }
+                   
                     captureSession!!.setRepeatingRequest(captureRequestBuilder!!.build(), null, null)
                 } catch (e: CameraAccessException) { 
                     e.printStackTrace()
