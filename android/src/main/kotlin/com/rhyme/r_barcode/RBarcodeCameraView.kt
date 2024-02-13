@@ -35,6 +35,7 @@ class RBarcodeCameraView(private val activity: Activity,
     private val textureEntry: SurfaceTextureEntry = texture
     private val frameThreadHandler = HandlerThread("frame thread")
     private val frameHandler: Handler
+    private var zoomLevel: Float = 2f 
 
     init {
         val preset = ResolutionPreset.valueOf(resolutionPreset)
