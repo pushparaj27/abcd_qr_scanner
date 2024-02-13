@@ -57,7 +57,6 @@ dependencies {
 //    implementation 'me.dm7.barcodescanner:zbar:1.9.13'
 
     implementation 'com.google.zxing:core:3.4.1'
-    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
 
 
 }
